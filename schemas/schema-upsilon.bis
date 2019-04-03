@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSInputSchema>
+<BCSInputSchema name="upsilon" version="2">
+    <Property name="FrtMkIV" role="Descriptor" form="Continuous"/>
+    <Property name="Rem-T7k" role="Solubility" form="Continuous"/>
+</BCSInputSchema>

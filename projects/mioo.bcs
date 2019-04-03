@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSAnalysis>
+<BCSAnalysis seed="997056" version="1.0" name="mioo.bcs">
+    <AnalysisModel schemaKey="3" viewKey="2">
+        <Items>
+            <Item class="input.csvinput" key="997046" label="CSV Input" state="enabled">
+                <Property value="3" name="rev"/>
+                <Property value="2" name="schema-key"/>
+                <Property value="'D:/Documentos/bcsmap-proj/input-files/test-input-no-smiles.csv'" name="source"/>
+            </Item>
+            <Item class="analysis.workflow" key="997047" label="Workflow" state="enabled">
+                <Property value="6" name="rev"/>
+                <Property value="''" name="code"/>
+                <Property value="None" name="parsed_code"/>
+                <Property value="None" name="schemas"/>
+                <Property value="0" name="auto_start"/>
+            </Item>
+            <Item class="viz.radviz" key="997052" label="RadViz" state="enabled">
+                <Property value="0" name="rev"/>
+                <Property value="set()" name="views"/>
+                <Property value="{}" name="config"/>
+            </Item>
+        </Items>
+        <Connections>
+            <Connection from="997046" key="997053" state="enabled" to="997047"/>
+            <Connection from="997047" key="997054" state="enabled" to="997052"/>
+        </Connections>
+        <Schemas>
+            <Schema source="D:/Documentos/bcsmap-proj/schemas/test-schema.bis" key="2" version="8" name="test-schema"/>
+        </Schemas>
+        <Views/>
+    </AnalysisModel>
+    <SceneData>
+        <Proxy y="23.0" key="997052" x="299.0"/>
+        <Proxy y="28.0" key="997046" x="31.0"/>
+        <Proxy y="3.0" key="997047" x="143.0"/>
+    </SceneData>
+</BCSAnalysis>

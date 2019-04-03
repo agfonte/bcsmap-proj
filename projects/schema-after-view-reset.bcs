@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSAnalysis>
+<BCSAnalysis version="1.0" name="schema-after-view-reset.bcs" seed="6258225">
+    <AnalysisModel viewKey="0" schemaKey="1">
+        <Items>
+            <Item key="6258221" label="CSV Input" class="input.csvinput">
+                <Property value="0" name="schema-key"/>
+                <Property value="2" name="rev"/>
+                <Property value="'E:/!Debug/bcsmap-proj/input-files/test-input-no-smiles.csv'" name="source"/>
+            </Item>
+        </Items>
+        <Connections/>
+        <Views/>
+        <Schemas>
+            <Schema key="0" version="1" name="test-schema" source="E:/05 - Work/01 - Projects/bcsmap-proj/schemas/test-schema.bis"/>
+        </Schemas>
+    </AnalysisModel>
+    <SceneData>
+        <Proxy x="518.0" key="6258221" y="399.0"/>
+    </SceneData>
+</BCSAnalysis>

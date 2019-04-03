@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSAnalysis>
+<BCSAnalysis version="1.0" name="xxx.bcs" seed="2246838">
+    <AnalysisModel schemaKey="1" viewKey="36">
+        <Items>
+            <Item state="enabled" label="CSV Input" class="input.csvinput" key="2246834">
+                <Property value="'E:/05 - Work/01 - Projects/bcsmap-proj/input-files/test-input-no-smiles.csv'" name="source"/>
+                <Property value="0" name="schema-key"/>
+                <Property value="1" name="rev"/>
+            </Item>
+            <Item state="enabled" label="RadViz" class="viz.radviz" key="2246835">
+                <Property value="{(2246834, 1, 0, 0): {'selected': None, 'label': 0}}" name="config"/>
+                <Property value="{(2246834, 1, 0, 0)}" name="views"/>
+                <Property value="0" name="rev"/>
+            </Item>
+        </Items>
+        <Connections>
+            <Connection to="2246835" state="enabled" from="2246834" key="2246836"/>
+        </Connections>
+        <Schemas>
+            <Schema version="8" source="E:/05 - Work/01 - Projects/bcsmap-proj/schemas/test-schema.bis" name="test-schema" key="0"/>
+        </Schemas>
+        <Views>
+            <View index="35" source="2248B2-1-0-0.csv" key="(2246834, 1, 0, 0)">
+                <Meta value="8" key="schema-version"/>
+                <Meta value="test-schema" key="schema-name"/>
+                <Meta value="" key="comments"/>
+                <Meta value="0" key="schema-key"/>
+                <Meta value="" key="name"/>
+            </View>
+        </Views>
+    </AnalysisModel>
+    <SceneData>
+        <Proxy y="527.0" key="2246834" x="505.0"/>
+        <Proxy y="533.0" key="2246835" x="804.0"/>
+    </SceneData>
+</BCSAnalysis>

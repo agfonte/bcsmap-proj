@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSAnalysis>
+<BCSAnalysis seed="1471377" version="1.0" name="viz-test.bcs">
+    <AnalysisModel schemaKey="1" viewKey="39">
+        <Items>
+            <Item state="enabled" label="CSV Input" key="1471366" class="input.csvinput">
+                <Property value="2" name="rev"/>
+                <Property value="'E:/bcsmap-proj/input-files/test-input-no-smiles.csv'" name="source"/>
+                <Property value="0" name="schema-key"/>
+            </Item>
+            <Item state="enabled" label="RadViz" key="1471368" class="viz.radviz">
+                <Property value="1" name="rev"/>
+                <Property value="{(1471370, 2, 34, 1): {'label': 0, 'selected': None}}" name="config"/>
+                <Property value="{(1471370, 2, 34, 1), (1471370, 2, 34, 0), (1471370, 2, 34, 3), (1471370, 2, 34, 2)}" name="views"/>
+            </Item>
+            <Item state="enabled" label="Scatter Plot" key="1471369" class="viz.scatter">
+                <Property value="2" name="rev"/>
+                <Property value="-1" name="current"/>
+                <Property value="set()" name="views"/>
+            </Item>
+            <Item state="enabled" label="KMeans" key="1471370" class="analysis.kmeans">
+                <Property value="2" name="rev"/>
+                <Property value="{'minimum-size': 30, 'na-policy': 'drop', 'schema-key': 0, 'iterations': 20, 'k': 4, 'threshold': 0.0001, 'selected-features': ['CLogP', 'Dmax', 'Smin']}" name="0"/>
+            </Item>
+        </Items>
+        <Connections>
+            <Connection state="enabled" from="1471366" to="1471370" key="1471371"/>
+            <Connection state="enabled" from="1471370" to="1471368" key="1471372"/>
+            <Connection state="enabled" from="1471370" to="1471369" key="1471373"/>
+        </Connections>
+        <Schemas>
+            <Schema source="E:/05 - Work/01 - Projects/bcsmap-proj/schemas/test-schema.bis" version="8" name="test-schema" key="0"/>
+        </Schemas>
+        <Views/>
+    </AnalysisModel>
+    <SceneData>
+        <Proxy y="570.0" key="1471366" x="300.0"/>
+        <Proxy y="504.0" key="1471368" x="739.0"/>
+        <Proxy y="675.0" key="1471369" x="700.0"/>
+        <Proxy y="566.0" key="1471370" x="537.0"/>
+    </SceneData>
+</BCSAnalysis>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSAnalysis>
+<BCSAnalysis name="a-more-complete-example.bcs" seed="13813258" version="1.0">
+    <AnalysisModel schemaKey="1" viewKey="33">
+        <Items>
+            <Item key="13813237" label="CSV Input" class="input.csvinput" state="enabled">
+                <Property value="7" name="rev"/>
+                <Property value="0" name="schema-key"/>
+                <Property value="'D:/Documentos/bcsmap-proj/input-files/test-input-no-smiles - large.csv'" name="source"/>
+            </Item>
+            <Item key="13813238" label="Gate" class="input.gate" state="enabled">
+                <Property value="1" name="rev"/>
+                <Property value="30" name="value"/>
+            </Item>
+            <Item key="13813239" label="On-demand Dispatcher" class="input.dispatcher" state="enabled">
+                <Property value="2" name="rev"/>
+                <Property value="{(13813248, 2, 29, 0), (13813248, 2, 30, 0)}" name="views"/>
+            </Item>
+            <Item key="13813240" label="KMeans" class="analysis.kmeans" state="enabled">
+                <Property value="2" name="rev"/>
+                <Property value="{'minimum-size': 30, 'na-policy': 'fill-mean', 'schema-key': 0, 'iterations': 20, 'selected-features': ['CLogP', 'Dmax', 'Smin'], 'threshold': 0.0001, 'k': 2}" name="0"/>
+            </Item>
+            <Item key="13813241" label="Scatter Plot" class="viz.scatter" state="enabled">
+                <Property value="2" name="rev"/>
+                <Property value="set()" name="views"/>
+                <Property value="-1" name="current"/>
+            </Item>
+            <Item key="13813242" label="RadViz" class="viz.radviz" state="enabled">
+                <Property value="3" name="rev"/>
+                <Property value="{(13813248, 2, 29, 0)}" name="views"/>
+                <Property value="{(13813248, 2, 29, 0): {'label': 0, 'selected': [True, True, True, True]}}" name="config"/>
+            </Item>
+            <Item key="13813248" label="Property Filter" class="analysis.filters" state="enabled">
+                <Property value="3" name="rev"/>
+                <Property value="[(0, 8, 'CLogP', 'gt', 1.0), (0, 8, 'Dmax', 'gte', 1.0)]" name="filters"/>
+            </Item>
+        </Items>
+        <Connections>
+            <Connection key="13813243" to="13813242" from="13813239" state="enabled"/>
+            <Connection key="13813244" to="13813241" from="13813239" state="enabled"/>
+            <Connection key="13813245" to="13813240" from="13813237" state="enabled"/>
+            <Connection key="13813246" to="13813238" from="13813240" state="disabled"/>
+            <Connection key="13813247" to="13813239" from="13813238" state="enabled"/>
+            <Connection key="13813249" to="13813248" from="13813240" state="enabled"/>
+            <Connection key="13813250" to="13813238" from="13813248" state="enabled"/>
+        </Connections>
+        <Schemas>
+            <Schema name="test-schema" key="0" version="8" source="E:/05 - Work/01 - Projects/bcsmap-proj/schemas/test-schema.bis"/>
+        </Schemas>
+        <Views/>
+    </AnalysisModel>
+    <SceneData>
+        <Proxy key="13813237" y="336.0" x="278.0"/>
+        <Proxy key="13813238" y="258.0" x="713.0"/>
+        <Proxy key="13813239" y="409.0" x="557.0"/>
+        <Proxy key="13813240" y="224.0" x="386.0"/>
+        <Proxy key="13813241" y="489.0" x="814.0"/>
+        <Proxy key="13813242" y="454.0" x="353.0"/>
+        <Proxy key="13813248" y="141.0" x="547.0"/>
+    </SceneData>
+</BCSAnalysis>

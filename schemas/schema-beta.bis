@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSInputSchema>
+<BCSInputSchema name="beta-proj" version="1">
+    <Property name="Josephine" role="Solubility" form="Continuous"/>
+    <Property name="BCS-K" role="BCS Class" form="Nominal"/>
+</BCSInputSchema>

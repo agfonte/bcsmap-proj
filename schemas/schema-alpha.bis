@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSInputSchema>
+<BCSInputSchema name="alpha" version="0">
+    <Property name="JK-phi" role="Descriptor" form="Continuous"/>
+    <Property name="C-Klog" role="Descriptor" form="Continuous"/>
+    <Property name="Xor-d" role="Tag" form="Nominal"/>
+</BCSInputSchema>

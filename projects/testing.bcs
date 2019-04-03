@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSAnalysis>
+<BCSAnalysis seed="12121801" version="1.0" name="testing.bcs">
+    <AnalysisModel schemaKey="1" viewKey="51">
+        <Items>
+            <Item label="CSV Input" state="enabled" key="12121767" class="input.csvinput">
+                <Property value="0" name="schema-key"/>
+                <Property value="1" name="rev"/>
+                <Property value="'E:/bcsmap-proj/input-files/test-input-no-smiles.csv'" name="source"/>
+            </Item>
+            <Item label="RadViz" state="enabled" key="12121768" class="viz.radviz">
+                <Property value="{(12121779, 2, 46, 2), (12121779, 2, 46, 3), (12121779, 2, 46, 0), (12121779, 2, 46, 1), (12121767, 1, 0, 0)}" name="views"/>
+                <Property value="3" name="rev"/>
+                <Property value="{(12121779, 2, 46, 2): {'selected': [True, True, False, False, False, False, False, True, True, False, True, False, True, False], 'label': 0}, (12121767, 1, 0, 0): {'selected': [True, True, False, False, False, False, False, True, True, False, True, False, True, False], 'label': 0}}" name="config"/>
+            </Item>
+            <Item label="KMeans" state="enabled" key="12121779" class="analysis.kmeans">
+                <Property value="{'iterations': 20, 'minimum-size': 30, 'schema-key': 0, 'threshold': 0.0001, 'na-policy': 'drop', 'selected-features': ['Foral', 'Do', 'MW', 'MLOGP'], 'k': 4}" name="0"/>
+                <Property value="2" name="rev"/>
+            </Item>
+            <Item label="Gate" state="enabled" key="12121780" class="input.gate">
+                <Property value="30" name="value"/>
+                <Property value="1" name="rev"/>
+            </Item>
+            <Item label="Property Filter" state="enabled" key="12121786" class="analysis.filters">
+                <Property value="[(0, 2, 'MW', 'lte', 500.0), (0, 2, 'MLOGP', 'lte', 5.0), (0, 2, 'nHAcc', 'lte', 10.0), (0, 2, 'nHDon', 'lte', 5.0)]" name="filters"/>
+                <Property value="1" name="rev"/>
+            </Item>
+        </Items>
+        <Connections>
+            <Connection state="disabled" to="12121768" key="12121769" from="12121767"/>
+            <Connection state="enabled" to="12121780" key="12121783" from="12121779"/>
+            <Connection state="enabled" to="12121768" key="12121784" from="12121780"/>
+            <Connection state="enabled" to="12121786" key="12121787" from="12121767"/>
+            <Connection state="enabled" to="12121779" key="12121788" from="12121786"/>
+        </Connections>
+        <Schemas>
+            <Schema version="2" key="0" name="trial" source="E:/bcsmap-proj/schemas/trial-schema.bis"/>
+        </Schemas>
+        <Views>
+            <View index="50" key="(12121779, 2, 46, 3)" source="B8F6B3-2-2E-3.csv">
+                <Meta value="III" key="name"/>
+                <Meta value="0" key="schema-key"/>
+                <Meta value="" key="comments"/>
+                <Meta value="trial" key="schema-name"/>
+                <Meta value="2" key="schema-version"/>
+            </View>
+            <View index="48" key="(12121779, 2, 46, 1)" source="B8F6B3-2-2E-1.csv">
+                <Meta value="II/I" key="name"/>
+                <Meta value="0" key="schema-key"/>
+                <Meta value="" key="comments"/>
+                <Meta value="trial" key="schema-name"/>
+                <Meta value="2" key="schema-version"/>
+            </View>
+            <View index="46" key="(12121786, 1, 0, 0)" source="B8F6BA-1-0-0.csv">
+                <Meta value="FILTERED" key="name"/>
+                <Meta value="0" key="schema-key"/>
+                <Meta value="" key="comments"/>
+                <Meta value="trial" key="schema-name"/>
+                <Meta value="2" key="schema-version"/>
+            </View>
+            <View index="47" key="(12121779, 2, 46, 0)" source="B8F6B3-2-2E-0.csv">
+                <Meta value="I/II" key="name"/>
+                <Meta value="0" key="schema-key"/>
+                <Meta value="" key="comments"/>
+                <Meta value="trial" key="schema-name"/>
+                <Meta value="2" key="schema-version"/>
+            </View>
+            <View index="49" key="(12121779, 2, 46, 2)" source="B8F6B3-2-2E-2.csv">
+                <Meta value="I/III" key="name"/>
+                <Meta value="0" key="schema-key"/>
+                <Meta value="" key="comments"/>
+                <Meta value="trial" key="schema-name"/>
+                <Meta value="2" key="schema-version"/>
+            </View>
+            <View index="45" key="(12121767, 1, 0, 0)" source="B8F6A7-1-0-0.csv">
+                <Meta value="TRIAL" key="name"/>
+                <Meta value="0" key="schema-key"/>
+                <Meta value="Generated during testing" key="comments"/>
+                <Meta value="trial" key="schema-name"/>
+                <Meta value="2" key="schema-version"/>
+            </View>
+        </Views>
+    </AnalysisModel>
+    <SceneData>
+        <Proxy x="457.0" key="12121767" y="595.0"/>
+        <Proxy x="1099.0" key="12121768" y="658.0"/>
+        <Proxy x="741.0" key="12121779" y="865.0"/>
+        <Proxy x="980.0" key="12121780" y="813.0"/>
+        <Proxy x="497.0" key="12121786" y="838.0"/>
+    </SceneData>
+</BCSAnalysis>

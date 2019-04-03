@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSInputSchema>
+<BCSInputSchema version="2" name="trial">
+    <Property role="Descriptor" form="Continuous" name="MW"/>
+    <Property role="BCS Class" form="Nominal" name="BCS-Final"/>
+    <Property role="Descriptor" form="Continuous" name="nHDon"/>
+    <Property role="Descriptor" form="Continuous" name="nHAcc"/>
+    <Property role="Descriptor" form="Continuous" name="Ui"/>
+    <Property role="Descriptor" form="Continuous" name="Hy"/>
+    <Property role="Descriptor" form="Continuous" name="AMR"/>
+    <Property role="Descriptor" form="Continuous" name="TPSA(NO)"/>
+    <Property role="Descriptor" form="Continuous" name="TPSA(Tot)"/>
+    <Property role="Descriptor" form="Continuous" name="MLOGP"/>
+    <Property role="Descriptor" form="Continuous" name="MLOGP2"/>
+    <Property role="Descriptor" form="Continuous" name="ALOGP"/>
+    <Property role="Descriptor" form="Continuous" name="ALOGP2"/>
+    <Property role="Descriptor" form="Continuous" name="Do"/>
+    <Property role="Bioavailability" form="Continuous" name="Foral"/>
+</BCSInputSchema>

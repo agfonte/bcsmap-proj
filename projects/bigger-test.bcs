@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSAnalysis>
+<BCSAnalysis name="bigger-test.bcs" seed="9912168" version="1.0">
+    <AnalysisModel viewKey="0" schemaKey="1">
+        <Items>
+            <Item class="input.csvinput" label="CSV Input" key="9912161" state="enabled">
+                <Property name="rev" value="1"/>
+                <Property name="source" value="'E:/05 - Work/01 - Projects/bcsmap-proj/input-files/test-input-no-smiles.csv'"/>
+                <Property name="schema-key" value="0"/>
+            </Item>
+            <Item class="input.dispatcher" label="On-demand Dispatcher" key="9912162" state="enabled">
+                <Property name="rev" value="0"/>
+                <Property name="views" value="[]"/>
+            </Item>
+            <Item class="analysis.kmeans" label="KMeans" key="9912163" state="enabled">
+                <Property name="rev" value="2"/>
+                <Property name="0" value="{'selected-features': ['CLogP', 'Dmax', 'Smin'], 'schema-key': 0, 'threshold': 0.0001, 'iterations': 20, 'na-policy': 'fill-mean', 'minimum-size': 30, 'k': 4}"/>
+            </Item>
+            <Item class="viz.scatter" label="Scatter Plot" key="9912164" state="enabled">
+                <Property name="rev" value="0"/>
+                <Property name="current" value="-1"/>
+                <Property name="views" value="set()"/>
+            </Item>
+        </Items>
+        <Connections>
+            <Connection to="9912163" key="9912165" state="enabled" from="9912161"/>
+            <Connection to="9912162" key="9912166" state="enabled" from="9912163"/>
+            <Connection to="9912164" key="9912167" state="enabled" from="9912162"/>
+        </Connections>
+        <Schemas>
+            <Schema name="test-schema" key="0" source="E:/05 - Work/01 - Projects/bcsmap-proj/schemas/test-schema.bis" version="8"/>
+        </Schemas>
+        <Views/>
+    </AnalysisModel>
+    <SceneData>
+        <Proxy key="9912161" y="275.0" x="190.0"/>
+        <Proxy key="9912162" y="413.0" x="550.0"/>
+        <Proxy key="9912164" y="280.0" x="818.0"/>
+        <Proxy key="9912163" y="293.0" x="391.0"/>
+    </SceneData>
+</BCSAnalysis>

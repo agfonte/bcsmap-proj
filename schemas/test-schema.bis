@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSInputSchema>
+<BCSInputSchema name="test-schema" version="8">
+    <Property name="PAMPA" form="Continuous" role="Permeability"/>
+    <Property name="CLogP" form="Continuous" role="Solubility"/>
+    <Property name="BCS-Lindenberg" form="Nominal" role="BCS Class"/>
+    <Property name="BCS-Kasim" form="Nominal" role="BCS Class"/>
+    <Property name="BCS-Final" form="Nominal" role="BCS Class"/>
+    <Property name="Dmax" form="Continuous" role="Descriptor"/>
+    <Property name="Smin" form="Continuous" role="Solubility"/>
+    <Property name="BCS-OMS" form="Nominal" role="BCS Class"/>
+</BCSInputSchema>

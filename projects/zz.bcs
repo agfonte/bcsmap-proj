@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSAnalysis>
+<BCSAnalysis version="1.0" seed="13546468" name="zz.bcs">
+    <AnalysisModel viewKey="43" schemaKey="1">
+        <Items>
+            <Item key="13546437" state="enabled" class="input.csvinput" label="CSV Input">
+                <Property name="rev" value="2"/>
+                <Property name="schema-key" value="0"/>
+                <Property name="source" value="'D:/Documentos/bcsmap-proj/input-files/test-input-no-smiles.csv'"/>
+            </Item>
+            <Item key="13546438" state="enabled" class="analysis.kmeans" label="KMeans">
+                <Property name="rev" value="0"/>
+                <Property name="0" value="{'schema-key': 0, 'selected-features': ['Smin', 'Dmax'], 'iterations': 20, 'na-policy': 'drop', 'minimum-size': 30, 'k': 4, 'threshold': 0.0001}"/>
+            </Item>
+            <Item key="13546440" state="enabled" class="analysis.filters" label="Property Filter">
+                <Property name="rev" value="1"/>
+                <Property name="filters" value="[(0, 7, 'BCS-Final', 'eq', 'I')]"/>
+            </Item>
+            <Item key="13546464" state="enabled" class="viz.radviz" label="RadViz">
+                <Property name="rev" value="1"/>
+                <Property name="views" value="{(13546440, 1, 38, 0), (13546440, 1, 35, 0), (13546440, 1, 36, 0), (13546440, 1, 37, 0)}"/>
+                <Property name="config" value="{(13546440, 1, 38, 0): {'label': 0, 'selected': [True, True, True, True]}}"/>
+            </Item>
+        </Items>
+        <Connections>
+            <Connection to="13546438" key="13546442" state="enabled" from="13546437"/>
+            <Connection to="13546440" key="13546443" state="enabled" from="13546438"/>
+            <Connection to="13546464" key="13546465" state="enabled" from="13546440"/>
+        </Connections>
+        <Schemas>
+            <Schema version="8" key="0" name="test-schema" source="E:/05 - Work/01 - Projects/bcsmap-proj/schemas/test-schema.bis"/>
+        </Schemas>
+        <Views>
+            <View key="(13546437, 2, 0, 0)" index="34" source="CEB3C5-2-0-0.csv">
+                <Meta key="name" value=""/>
+                <Meta key="comments" value=""/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="schema-version" value="8"/>
+            </View>
+            <View key="(13546438, 0, 34, 0)" index="35" source="CEB3C6-0-22-0.csv">
+                <Meta key="name" value=""/>
+                <Meta key="comments" value=""/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="schema-version" value="8"/>
+            </View>
+            <View key="(13546438, 0, 34, 1)" index="36" source="CEB3C6-0-22-1.csv">
+                <Meta key="name" value=""/>
+                <Meta key="comments" value=""/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="schema-version" value="8"/>
+            </View>
+            <View key="(13546438, 0, 34, 2)" index="37" source="CEB3C6-0-22-2.csv">
+                <Meta key="name" value=""/>
+                <Meta key="comments" value=""/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="schema-version" value="8"/>
+            </View>
+            <View key="(13546438, 0, 34, 3)" index="38" source="CEB3C6-0-22-3.csv">
+                <Meta key="name" value=""/>
+                <Meta key="comments" value=""/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="schema-version" value="8"/>
+            </View>
+            <View key="(13546440, 1, 35, 0)" index="39" source="CEB3C8-1-23-0.csv">
+                <Meta key="name" value=""/>
+                <Meta key="comments" value=""/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="schema-version" value="8"/>
+            </View>
+            <View key="(13546440, 1, 38, 0)" index="40" source="CEB3C8-1-26-0.csv">
+                <Meta key="name" value=""/>
+                <Meta key="comments" value=""/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="schema-version" value="8"/>
+            </View>
+            <View key="(13546440, 1, 37, 0)" index="41" source="CEB3C8-1-25-0.csv">
+                <Meta key="name" value=""/>
+                <Meta key="comments" value=""/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="schema-version" value="8"/>
+            </View>
+            <View key="(13546440, 1, 36, 0)" index="42" source="CEB3C8-1-24-0.csv">
+                <Meta key="name" value=""/>
+                <Meta key="comments" value=""/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="schema-version" value="8"/>
+            </View>
+        </Views>
+    </AnalysisModel>
+    <SceneData>
+        <Proxy y="234.0" key="13546440" x="228.0"/>
+        <Proxy y="116.0" key="13546437" x="67.0"/>
+        <Proxy y="122.0" key="13546464" x="214.0"/>
+        <Proxy y="232.0" key="13546438" x="63.0"/>
+    </SceneData>
+</BCSAnalysis>

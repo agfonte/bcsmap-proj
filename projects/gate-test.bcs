@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSAnalysis>
+<BCSAnalysis name="gate-test.bcs" seed="10359617" version="1.0">
+    <AnalysisModel viewKey="0" schemaKey="0">
+        <Items>
+            <Item label="Gate" state="enabled" key="10359616" class="analysis.gate">
+                <Property name="rev" value="1"/>
+                <Property name="value" value="25"/>
+            </Item>
+        </Items>
+        <Connections/>
+        <Schemas/>
+        <Views/>
+    </AnalysisModel>
+    <SceneData>
+        <Proxy y="374.0" x="499.0" key="10359616"/>
+    </SceneData>
+</BCSAnalysis>

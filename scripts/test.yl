@@ -1,0 +1,62 @@
+schemas (test:
+            name='MW'           type='Continuous'  treated='Descriptor',        #Molecular weight
+            name="nHDon"        type="Continuous"  treated="Descriptor",        #Number of Hydrogen donated
+            name="nHAcc"        type="Continuous"  treated="Descriptor",
+            name="Ui"           type="Continuous"  treated="Descriptor",
+            name="BCS-Final"    type="Nominal"     treated="BCS Class",
+            name="Hy"           type="Continuous"  treated="Descriptor",
+            name="AMR"          type="Continuous"  treated="Descriptor",
+            name="TPSA(NO)"     type="Continuous"  treated="Descriptor",
+            name="TPSA(Tot)"    type="Continuous"  treated="Descriptor",
+            name="MLOGP"        type="Continuous"  treated="Descriptor",        #Partition coefficient
+            name="MLOGP2"       type="Continuous"  treated="Descriptor",
+            name="ALOGP"        type="Continuous"  treated="Descriptor",
+            name="ALOGP2"       type="Continuous"  treated="Descriptor",
+            name="Do"           type="Continuous"  treated="Descriptor",        #Maximum dosis
+            name="Foral"        type="Continuous"  treated="Bioavailability"    #Oral Fraction absorbed
+         )
+
+inp = csvinput(label='input')
+rad = radviz(label='viz')
+fil = filters(label='Rule of Five')
+kms = kmeans(label='First-Clustering')
+kms2 = kmeans(label='Second-Clustering')
+dis = dispatcher('On-Demand dispatcher')
+
+
+setup inp: vconfig = {'source':"D:\Documentos\bcsmap-proj\input-files\test-input-no-smiles.csv", 'vschema': test }
+
+setup fil: vconfig = {'filters':{
+                                    'filter3':{'vschema': test, 'Property':'MW',    'Operation':'<=', 'Value':500.0},
+                                    'filter4':{'vschema': test, 'Property':'MLOGP', 'Operation':'<=', 'Value':5.0},
+                                    'filter1':{'vschema': test, 'Property':'nHAcc', 'Operation':'<=', 'Value':10.0},
+                                    'filter2':{'vschema': test, 'Property':'nHDon', 'Operation':'<=', 'Value':5.0}
+                                }
+                     }
+setup kms: vconfig = {
+                        'vschema': test,
+                        'minimum-size': 30,
+                        'na-policy': 'drop',
+                        'iterations': 20,
+                        'selected-features': ['Foral', 'Do', 'MW', 'MLOGP'],
+                        'threshold': 0.0001,
+                        'k': 4
+                     }
+setup kms2: vconfig = {
+                        'vschema': test,
+                        'minimum-size': 30,
+                        'na-policy': 'drop',
+                        'iterations': 20,
+                        'selected-features': ['TPSA(Tot)', 'MLOGP', 'MW', 'nHDon', 'Do'],
+                        'threshold': 0.0001,
+                        'k': 2
+                       }
+
+inp -> fil, rad
+fil ->kms, dis
+kms, kms2 -> dis -> rad, kms2
+
+show inp in x=0 y=0, fil in x=0 y=200, rad in x =300 y = 0, kms in x =100 y =100, kms2 in x = 320 y = 170, dis in x = 190 y = 190
+dis ~> kms2
+
+start

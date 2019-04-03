@@ -1,0 +1,58 @@
+int1 = 5
+int2 = 10
+float1 = 15.58
+float2 = 15.69e10
+
+if float1 > float2:
+	print('Greater')
+elif float1 == float2:
+	print("Equal")
+else:
+	print(""""Lower""")
+	float3 = 100 if float2 > 500 else 200
+
+dict1 = {}
+arr1 = range(100)
+for i in range(length(arr1)):
+	if arr1[i] % 2:
+		dict1[i] = 'Even'
+	else:
+		arr1[i] = 0
+int1 = int2 + 5
+int1 = int2 - 5
+string1 = "test" * 3
+int3 = (int1 + int2 - (int1 ** int2)) / 4
+
+schemas (test:
+            name="CLogP" type="Continuous" treated="Solubility",
+            name="BCS-Lindenberg" type="Nominal" treated="BCS Class",
+            name="Dmax" type="Continuous" treated="Descriptor",
+            name="Smin" type="Continuous" treated="Solubility"
+          )
+inp = csvinput(label='entrada')
+viz = radviz(label='visualización')
+fil = filters(label='filtrado')
+kms = kmeans(label='clusterización')
+
+inp -> kms, fil -> viz
+inp ~> kms
+var1 = true if inp? else false
+if var1:
+	~inp
+else:
+	@inp
+show inp in x = 10 y =12, kms in x =100 y = 200
+showui inp
+hide inp
+layout organic
+workflow testing:
+    schemas (test:name='PAMPA' type='Continuous' treated='Permeability')
+    inputs fil = filters(label='fil')
+    outputs fil
+    setup fil: vconfig = {'filters':{'filter1':{'schema': test, 'Property':'PAMPA', 'Operation':'<', 'Value':1}}}
+    r = process(fil, task)
+    for i in r:
+        publish i
+        viz_radviz(i, ['PAMPA', 'CLogP', 'Dmax', 'Smin'], 'BCS-Lindenberg','imgs/radviz_for_view_' + string(i) + '.jpg')
+        print('>>>>><<<<<<<<<<<<<<<>>>>>>>>>>>>', i)
+

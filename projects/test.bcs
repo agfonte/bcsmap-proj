@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSAnalysis>
+<BCSAnalysis version="1.0" name="test.bcs" seed="12029451">
+    <AnalysisModel viewKey="0" schemaKey="1">
+        <Items>
+            <Item key="12029430" state="enabled" class="input.csvinput" label="CSV Input">
+                <Property value="1" name="rev"/>
+                <Property value="0" name="schema-key"/>
+                <Property value="'E:/05 - Work/01 - Projects/bcsmap-proj/input-files/test-input-no-smiles.csv'" name="source"/>
+            </Item>
+            <Item key="12029431" state="enabled" class="viz.scatter" label="Scatter Plot">
+                <Property value="[]" name="views"/>
+                <Property value="13" name="rev"/>
+                <Property value="-1" name="current"/>
+            </Item>
+            <Item key="12029432" state="enabled" class="analysis.kmeans" label="KMeans">
+                <Property value="0" name="rev"/>
+                <Property value="{'selected-features': ['Smin', 'Dmax'], 'minimum-size': 30, 'na-policy': 'drop', 'iterations': 20, 'threshold': 0.0001, 'k': 4, 'schema-key': 0}" name="0"/>
+            </Item>
+            <Item key="12029449" state="enabled" class="viz.radviz" label="RadViz">
+                <Property value="[]" name="views"/>
+                <Property value="0" name="rev"/>
+                <Property value="{}" name="config"/>
+            </Item>
+        </Items>
+        <Connections>
+            <Connection from="12029430" key="12029433" state="enabled" to="12029432"/>
+            <Connection from="12029432" key="12029434" state="enabled" to="12029431"/>
+            <Connection from="12029430" key="12029441" state="enabled" to="12029431"/>
+            <Connection from="12029431" key="12029450" state="enabled" to="12029449"/>
+        </Connections>
+        <Schemas>
+            <Schema version="7" key="0" name="test-schema" source="E:/05 - Work/01 - Projects/bcsmap-proj/schemas/test-schema.bis"/>
+        </Schemas>
+        <Views/>
+    </AnalysisModel>
+    <SceneData>
+        <Proxy y="209.0" key="12029431" x="726.0"/>
+        <Proxy y="423.0" key="12029432" x="571.0"/>
+        <Proxy y="249.0" key="12029430" x="247.0"/>
+        <Proxy y="394.0" key="12029449" x="992.0"/>
+    </SceneData>
+</BCSAnalysis>

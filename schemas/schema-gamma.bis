@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSInputSchema>
+<BCSInputSchema version="0" name="gamma">
+    <Property form="Continuous" role="Solubility" name="Smin"/>
+    <Property form="Continuous" role="Bioavailability" name="Dmax"/>
+</BCSInputSchema>

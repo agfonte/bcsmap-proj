@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSAnalysis>
+<BCSAnalysis name="trial-and-tribulation.bcs" seed="1064463" version="1.0">
+    <AnalysisModel viewKey="1" schemaKey="1">
+        <Items>
+            <Item state="enabled" label="CSV Input" key="1064455" class="input.csvinput">
+                <Property name="rev" value="1"/>
+                <Property name="schema-key" value="0"/>
+                <Property name="source" value="'E:/05 - Work/01 - Projects/bcsmap-proj/input-files/test-input-no-smiles.csv'"/>
+            </Item>
+            <Item state="enabled" label="KMeans" key="1064456" class="analysis.kmeans">
+                <Property name="0" value="{'iterations': 20, 'k': 4, 'schema-key': 0, 'threshold': 0.0001, 'minimum-size': 30, 'na-policy': 'drop', 'selected-features': ['Smin', 'Dmax']}"/>
+                <Property name="rev" value="1"/>
+            </Item>
+            <Item state="enabled" label="(De)bugger" key="1064457" class="analysis.dummy">
+                <Property name="rev" value="0"/>
+            </Item>
+        </Items>
+        <Connections>
+            <Connection state="enabled" to="1064456" key="1064458" from="1064455"/>
+            <Connection state="enabled" to="1064457" key="1064459" from="1064456"/>
+            <Connection state="enabled" to="1064456" key="1064460" from="1064457"/>
+        </Connections>
+        <Schemas>
+            <Schema name="test-schema" key="0" source="E:/05 - Work/01 - Projects/bcsmap-proj/schemas/test-schema.bis" version="7"/>
+        </Schemas>
+        <Views>
+            <View key="(1064455, 1, 0, 0)" source="103E07-1-0-0.csv" index="0">
+                <Meta value="7" key="schema-version"/>
+                <Meta value="" key="comments"/>
+                <Meta value="" key="name"/>
+                <Meta value="test-schema" key="schema-name"/>
+                <Meta value="0" key="schema-key"/>
+            </View>
+        </Views>
+    </AnalysisModel>
+    <SceneData>
+        <Proxy key="1064455" x="275.0" y="189.0"/>
+        <Proxy key="1064456" x="528.0" y="328.0"/>
+        <Proxy key="1064457" x="788.0" y="279.0"/>
+    </SceneData>
+</BCSAnalysis>

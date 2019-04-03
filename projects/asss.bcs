@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSAnalysis>
+<BCSAnalysis version="1.0" seed="11177983" name="asss.bcs">
+    <AnalysisModel schemaKey="1" viewKey="5">
+        <Items>
+            <Item key="11177968" state="enabled" label="CSV Input" class="input.csvinput">
+                <Property value="0" name="schema-key"/>
+                <Property value="'E:/05 - Work/01 - Projects/bcsmap-proj/input-files/test-input-no-smiles.csv'" name="source"/>
+                <Property value="1" name="rev"/>
+            </Item>
+            <Item key="11177969" state="enabled" label="Gate" class="input.gate">
+                <Property value="25" name="value"/>
+                <Property value="1" name="rev"/>
+            </Item>
+            <Item key="11177970" state="enabled" label="KMeans" class="analysis.kmeans">
+                <Property value="{'na-policy': 'drop', 'minimum-size': 30, 'iterations': 20, 'selected-features': ['CLogP', 'Dmax', 'Smin'], 'k': 4, 'schema-key': 0, 'threshold': 0.0001}" name="0"/>
+                <Property value="0" name="rev"/>
+            </Item>
+            <Item key="11177971" state="enabled" label="RadViz" class="viz.radviz">
+                <Property value="1" name="rev"/>
+                <Property value="{(11177970, 0, 0, 0), (11177970, 0, 0, 3)}" name="views"/>
+                <Property value="{}" name="config"/>
+            </Item>
+        </Items>
+        <Connections>
+            <Connection from="11177968" key="11177972" state="enabled" to="11177970"/>
+            <Connection from="11177970" key="11177973" state="enabled" to="11177969"/>
+            <Connection from="11177969" key="11177974" state="enabled" to="11177971"/>
+        </Connections>
+        <Schemas>
+            <Schema key="0" source="E:/05 - Work/01 - Projects/bcsmap-proj/schemas/test-schema.bis" version="8" name="test-schema"/>
+        </Schemas>
+        <Views>
+            <View key="(11177970, 0, 0, 3)" source="AA8FF2-0-0-3.csv" index="4">
+                <Meta key="schema-version" value="8"/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="comments" value=""/>
+                <Meta key="name" value=""/>
+            </View>
+            <View key="(11177970, 0, 0, 1)" source="AA8FF2-0-0-1.csv" index="2">
+                <Meta key="schema-version" value="8"/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="comments" value=""/>
+                <Meta key="name" value=""/>
+            </View>
+            <View key="(11177970, 0, 0, 0)" source="AA8FF2-0-0-0.csv" index="1">
+                <Meta key="schema-version" value="8"/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="comments" value=""/>
+                <Meta key="name" value=""/>
+            </View>
+            <View key="(11177968, 1, 0, 0)" source="AA8FF0-1-0-0.csv" index="0">
+                <Meta key="schema-version" value="8"/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="comments" value=""/>
+                <Meta key="name" value=""/>
+            </View>
+            <View key="(11177970, 0, 0, 2)" source="AA8FF2-0-0-2.csv" index="3">
+                <Meta key="schema-version" value="8"/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="comments" value=""/>
+                <Meta key="name" value=""/>
+            </View>
+        </Views>
+    </AnalysisModel>
+    <SceneData>
+        <Proxy key="11177968" y="340.0" x="370.0"/>
+        <Proxy key="11177969" y="382.0" x="763.0"/>
+        <Proxy key="11177970" y="412.0" x="564.0"/>
+        <Proxy key="11177971" y="352.0" x="1007.0"/>
+    </SceneData>
+</BCSAnalysis>

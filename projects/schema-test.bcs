@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE BCSAnalysis>
+<BCSAnalysis name="schema-test.bcs" version="1.0" seed="6258228">
+    <AnalysisModel schemaKey="2" viewKey="2">
+        <Items>
+            <Item key="6258221" label="Test Input" class="input.csvinput">
+                <Property name="rev" value="3"/>
+                <Property name="source" value="'E:/Tesis/Software/bcsmap-proj/input-files/test-input-no-smiles.csv'"/>
+                <Property name="schema-key" value="0"/>
+            </Item>
+        </Items>
+        <Connections/>
+        <Views>
+            <View key="(6258221, 2, 0, 0)" index="0" source="5F7E2D-2-0-0.csv">
+                <Meta key="schema-key" value="1"/>
+                <Meta key="comments" value="Write annotations here...."/>
+                <Meta key="schema-version" value="0"/>
+                <Meta key="schema-name" value="gamma"/>
+                <Meta key="name" value="Labeled"/>
+            </View>
+            <View key="(6258221, 3, 0, 0)" index="1" source="5F7E2D-3-0-0.csv">
+                <Meta key="schema-version" value="1"/>
+                <Meta key="comments" value=""/>
+                <Meta key="schema-name" value="test-schema"/>
+                <Meta key="schema-key" value="0"/>
+                <Meta key="name" value=""/>
+            </View>
+        </Views>
+        <Schemas>
+            <Schema key="0" name="test-schema" version="1" source="E:/05 - Work/01 - Projects/bcsmap-proj/schemas/test-schema.bis"/>
+            <Schema key="1" name="gamma" version="0" source="E:/!Debug/bcsmap-proj/schemas/schema-gamma.bis"/>
+        </Schemas>
+    </AnalysisModel>
+    <SceneData>
+        <Proxy key="6258221" x="564.0" y="481.0"/>
+    </SceneData>
+</BCSAnalysis>
